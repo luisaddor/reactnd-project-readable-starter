@@ -1,21 +1,25 @@
-import { LIST_CATEGORIES } from '../actions'
+import { LIST_CATEGORIES, LIST_POSTS } from '../actions'
 
 
 const initialState = {
   categories: [],
+  posts: []
 }
 
-function categories (state = initialState, action) {
+function getData (state = initialState, action) {
   switch(action.type) {
     case LIST_CATEGORIES:
-      const { categories } = action
-
       return {
         ...state,
-        categories: categories
+        categories: action.categories
+      }
+    case LIST_POSTS:
+      return {
+        ...state,
+        posts: action.posts
       }
     default: return state
   }
 }
 
-export default categories;
+export default getData;
