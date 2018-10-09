@@ -3,7 +3,7 @@ import { listCategories, listPosts } from '../actions';
 import { connect } from 'react-redux';
 import './App.css';
 
-import TopBar from './topBar'
+import TopBar from './components/topBar'
 
 class App extends Component {
 
