@@ -17,7 +17,6 @@ const styles = {
 
 class TopBar extends Component {
   render() {
-    console.log(this.props.categories)
     return (
       <div>
         <AppBar position="static" color="default">

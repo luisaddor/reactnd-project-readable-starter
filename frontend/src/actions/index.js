@@ -1,4 +1,4 @@
-import { getAllCategories, getAllPosts } from '../api/readableAPI';
+import { getAllCategories, getAll } from '../api/readableAPI';
 
 export const LIST_CATEGORIES = 'LIST_CATEGORIES';
 export const LIST_POSTS = 'LIST_POSTS'
@@ -13,7 +13,7 @@ export const listCategories = (dispatch) => {
 }
 
 export const listPosts = (dispatch) => {
-  getAllPosts().then(posts => {
+  getAll().then(posts => {
     dispatch({
       type: LIST_POSTS,
       posts

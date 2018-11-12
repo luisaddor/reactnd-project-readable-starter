@@ -8,14 +8,22 @@ import TopBar from './components/topBar'
 class App extends Component {
 
   componentDidMount() {
-    this.props.listPosts();
     this.props.listCategories();
+    this.props.listPosts();
   }
 
   render() {
+    console.log(this.props.posts)
+    console.log(this.props.categories)
     return (
       <div className="App">
         <TopBar categories={this.props.categories} />
+
+        <ul>
+          {this.props.posts.map(data => 
+            <li key={data.id}>{data.title}</li>
+          )}
+        </ul>
       </div>
     );
   }
